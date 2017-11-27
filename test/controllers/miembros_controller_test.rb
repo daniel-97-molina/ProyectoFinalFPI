@@ -12,7 +12,7 @@ class MiembrosControllerTest < ActionDispatch::IntegrationTest
 
   test "should create miembro" do
     assert_difference('Miembro.count') do
-      post miembros_url, params: { miembro: { activo: @miembro.activo, fechaingreso: @miembro.fechaingreso, masculino: @miembro.masculino, nombre: @miembro.nombre, sucursal: @miembro.sucursal } }, as: :json
+      post miembros_url, params: { miembro: { activo: @miembro.activo, fechaingreso: @miembro.fechaingreso, masculino: @miembro.masculino, nombre: @miembro.nombre, sucursal_id: @miembro.sucursal_id } }, as: :json
     end
 
     assert_response 201
@@ -24,7 +24,7 @@ class MiembrosControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update miembro" do
-    patch miembro_url(@miembro), params: { miembro: { activo: @miembro.activo, fechaingreso: @miembro.fechaingreso, masculino: @miembro.masculino, nombre: @miembro.nombre, sucursal: @miembro.sucursal } }, as: :json
+    patch miembro_url(@miembro), params: { miembro: { activo: @miembro.activo, fechaingreso: @miembro.fechaingreso, masculino: @miembro.masculino, nombre: @miembro.nombre, sucursal_id: @miembro.sucursal_id } }, as: :json
     assert_response 200
   end
 

@@ -26,7 +26,7 @@ class MiembrosController < ApplicationController
 
   # PATCH/PUT /miembros/1
   def update
-      if @miembro.update(miembro_params)
+    if @miembro.update(nombre: params[:nombre],masculino: params[:masculino],activo: params[:activo],sucursal_id: params[:sucursal_id],fechaingreso: params[:fechaingreso])
       render json: @miembro
     else
       render json: @miembro.errors, status: :unprocessable_entity
@@ -45,7 +45,8 @@ class MiembrosController < ApplicationController
     end
 
     # Only allow a trusted parameter "white list" through.
-    def miembro_params
-      params.require(:miembro).permit(:nombre, :masculino, :activo, params[:sucursal_id], :fechaingreso)
-    end
+    # def miembro_params
+    #
+    #   params.require(:miembro).permit(:nombre, :masculino, :activo, :sucursal_id, :fechaingreso)
+    # end
 end
