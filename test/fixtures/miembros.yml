@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nombre: MyString
+  masculino: false
+  activo: false
+  sucursal: one
+  fechaingreso: 2017-11-26
+
+two:
+  nombre: MyString
+  masculino: false
+  activo: false
+  sucursal: two
+  fechaingreso: 2017-11-26
